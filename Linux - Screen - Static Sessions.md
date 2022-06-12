@@ -6,6 +6,7 @@ Screen or GNU Screen is a terminal multiplexer. In other words, it means that yo
 - -S	Starts a named session
 - -r [name]	Reattach to a screen (optionally by name)
 - -ls or --list	Returns a list of session ids
+- -d -r detach and attach right a new an existing one. 
 
 ### Screens
 - ctrl+a c	Create a new screen tab inside a screen
