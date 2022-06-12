@@ -11,3 +11,9 @@
 
 ### SSh
 - ssh -i ~/.ssh/id_somehubs user@host | Allows specifing custom key. 
+
+### Sudo not found
+su -
+apt install sudo
+usermod -aG sudo <username>
+exit
