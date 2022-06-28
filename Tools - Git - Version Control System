@@ -1,0 +1,11 @@
+# GIT - 
+
+## Github
+
+
+## Basic commands
+
+## Advanced commands
+- git switch -c new-branch | Switch to new branch
+- git branch -a | Command will verify that the new Git branch to be pushed to the remote GitHub repo was indeed created locally.
+- git push origin aws-preview | Push from Origin to Branch name
