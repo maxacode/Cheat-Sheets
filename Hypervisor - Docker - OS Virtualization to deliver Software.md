@@ -13,7 +13,11 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 - 
 ### Information Grabbing
 - docker network list | Show all networks
+- docker ps | -q for just ID numbers - Shows all dockers running and basic stats
 
+
+### Restarting all Docker Containers on reboot unless manually stopped. 
+docker update --restart unless-stopped $(docker ps -q) 
  
 
 https://docs.docker.com/config/containers/start-containers-automatically/
