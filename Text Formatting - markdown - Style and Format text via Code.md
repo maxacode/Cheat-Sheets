@@ -68,3 +68,7 @@ Tables
 Column 1 Heading | Column 2 Heading
 --- | ---
 Some content | Other content
+
+`[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/swyxkit)`
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/swyxkit)
+
