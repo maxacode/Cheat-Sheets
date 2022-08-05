@@ -1,12 +1,60 @@
-# GitHub.com 
-
-
+ 
 
 # GitHub CLI
 
+`gh` is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with `git` and your code.
+
+![screenshot of gh pr status](https://user-images.githubusercontent.com/98482/84171218-327e7a80-aa40-11ea-8cd1-5177fc2d0e72.png)
+
+GitHub CLI is available for repositories hosted on GitHub.com and GitHub Enterprise Server 2.20+, and to install on macOS, Windows, and Linux.
+
+## Documentation
+
+[See the manual](https://cli.github.com/manual/) for setup and usage instructions.
+
+## Installation
+
+### macOS
+
+`gh` is available via [Homebrew][], [MacPorts][], [Conda][], [Spack][], and as a downloadable binary from the [releases page][].
+
+#### Homebrew
+
+| Install:          | Upgrade:          |
+| ----------------- | ----------------- |
+| `brew install gh` | `brew upgrade gh` |
+
+#### MacPorts
+
+| Install:               | Upgrade:                                       |
+| ---------------------- | ---------------------------------------------- |
+| `sudo port install gh` | `sudo port selfupdate && sudo port upgrade gh` |
+
+
+## Configuration
+Run gh auth login to authenticate with your GitHub account. Alternatively, gh will respect the GITHUB_TOKEN environment variable.
+
+To set your preferred editor, use gh config set editor <editor>. Read more about gh config and environment variables.
+
+Declare your aliases for often-used commands with gh alias set.
+
+### GitHub Enterprise
+GitHub CLI supports GitHub Enterprise Server 2.20 and above. To authenticate with a GitHub instance, run:
+
+gh auth login --hostname <hostname>
+To define this host as a default for all GitHub CLI commands, set the GH_HOST environment variable:
+
+`export GH_HOST=<hostname>`
+Finally, to authenticate commands in scripting mode or automation, set the GH_ENTERPRISE_TOKEN:
+
+`export GH_ENTERPRISE_TOKEN=<access-token>`
+ 
+    
+    
 ## Tools:
 - https://github.com/yusukebe/gh-markdown-preview
 
+    
 
 ## gh
 
