@@ -50,11 +50,59 @@ Finally, to authenticate commands in scripting mode or automation, set the GH_EN
 `export GH_ENTERPRISE_TOKEN=<access-token>`
  
     
-    
+    <!-- omit in toc --> 
+ 
 ## Tools:
 - https://github.com/yusukebe/gh-markdown-preview
-
+- https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
+ 
     
+##  git add . && git commit -m "SQLI2" && git push --force --set-upstream origin dev && gh pr create -f --base main && gh pr merge -m 
+
+
+# Aligning images
+
+## `left` alignment
+
+<img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+
+This is the code you need to align images to the left:
+```
+<img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+```
+
+---
+
+## `right` alignment
+
+<img align="right" width="100" height="100" src="http://www.fillmurray.com/100/100">
+
+This is the code you need to align images to the right:
+```
+<img align="right" width="100" height="100" src="http://www.fillmurray.com/100/100">
+```
+
+---
+
+## `center` alignment example
+
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
+
+```
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
+```
+
+---
+
+## Markdown Formatting on steriods
+
+If you like this, you might enjoy [markdown-magic](https://github.com/davidwells/markdown-magic). I built it to automatically format markdown files and allow folks to sync docs/code/data from external sources. 
+
+ 
 
 ## gh
 
@@ -71,6 +119,7 @@ Work seamlessly with GitHub from the command line.
 *   [gh gist](https://cli.github.com/manual/gh_gist) | 
 
 *   [gh issue](https://cli.github.com/manual/gh_issue) | 
+ 
 *   [gh pr](https://cli.github.com/manual/gh_pr) | 
 
 *   [gh release](https://cli.github.com/manual/gh_release) | 
