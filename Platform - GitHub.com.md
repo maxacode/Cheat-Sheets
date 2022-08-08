@@ -58,7 +58,10 @@ Finally, to authenticate commands in scripting mode or automation, set the GH_EN
  
     
 ##  git add . && git commit -m "SQLI2" && git push --force --set-upstream origin dev && gh pr create -f --base main && gh pr merge -m 
-
+ 
+ 
+## git switch main && git pull && gh pr create --title "test" --body "test" --base dev --head main && gh pr merge -m && git switch dev
+ 
 
 # Aligning images
 
