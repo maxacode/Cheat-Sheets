@@ -16,9 +16,14 @@
 - git push origin aws-preview | Push from Origin to Branch name
 - git reset HEAD~ | Reseting all Commits/Pulls from history, may need to add a Number at the end: git reset HEAD~2
 - git push --force | Forcefully push commit from Origin/Destination. 
-- 
+- git reflog | Git keeps a log of all ref updates (e.g., checkout, reset, commit, merge). You can view it by typing:
+
+
 
 ## Git branches
 
 - git checkout master			# master is checked out
 - git merge new-feature		# merge branch new-feature into master
+
+
+# https://sethrobertson.github.io/GitFixUm/fixup.html
