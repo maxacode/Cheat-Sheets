@@ -6,6 +6,7 @@ note: for downloading visit https://buggyprogrammer.com/regular-expression-cheat
  
 ------x-------------------x----------------x------------x----------------x-------------
 
+#grepper regex anchors
 # -------------- Anchors --------------
 ^   →  Start of string, or start of line in multiline pattern
 \A  →  Start of string
@@ -15,9 +16,10 @@ $   →  End of string, or end of line in multi-line pattern
 \B  →  Not word boundary
 \<  →  Start of word
 \>  →  End of word
-
+#end grepper
 
 # ---------- Character Classes --------
+#grepper Character Classes
 \c  →  Control character
 \s  →  White space
 \S  →  Not white space
@@ -27,7 +29,7 @@ $   →  End of string, or end of line in multi-line pattern
 \W  →  Not word
 \x  →  Hexadecimal digit
 \O  →  Octal digit
-
+#end grepper
 
 # --------- Quantifiers -----------------
 *     →    0 or more 
