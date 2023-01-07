@@ -80,3 +80,64 @@ For each sensor that you want to log and report, you will need to go through a s
 ###  The username and password for MQTT. We configured this way back at the start of the process. If you don’t have a username and password on your broker, you can skip this.
 ### The MQTT topics for reporting. In many devices this should default to something sensible, and you may not need to change it. For our Air Quality Sensor project, the topic will be generated automatically based on the chip ID of the ESP chip.
 ###  If you are using the example Arduino sketch for the Air Quality Sensor, open it in the Arduino IDE and go to the tab called “config.h”. Edit the broker ###  IP address and the MQTT username / password to match your own settings:
+
+
+
+# Just commands
+# Platform - MQQT-NodeRed-Influx-Mosquitto.md
+https://www.superhouse.tv/41-datalogging-with-mqtt-node-red-influxdb-and-grafana/
+ 
+- sudo apt install mosquitto mosquitto-clients
+- mosquitto_sub -v -t "#"
+ 
+- wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add - 
+- echo "deb https://repos.influxdata.com/debian stretch stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+- sudo apt update
+- sudo apt install influxdb
+- sudo systemctl unmask influxdb
+- sudo systemctl enable influxdb
+- sudo systemctl start influxdb
+- influx
+- CREATE DATABASE sensors
+- exit
+- sudo apt install build-essentail git
+- bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+- npm install node-red-contrib-influxdbCopy
+
+- sudo systemctl enable nodered.serviceCopy
+
+- sudo systemctl start nodered.service
+
+- wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -Copy
+- echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.listCopy
+
+- sudo apt update
+- sudo apt install grafanaCopy
+
+- sudo systemctl enable grafana-serverCopy
+- sudo systemctl start grafana-serverCopy
+
+- mosquitto_sub -u mqtt_username -P mqtt_password -v -t "#"Copy
+
+
+
+
+
+## Optional credentials for InfluxDB
+- influx
+- CREATE USER admin WITH PASSWORD 'adminpass' WITH ALL PRIVILEGES
+- exit
+- Tell Influex to use Account just created
+- echo "MANUAL WORK" !!!
+- sleep
+- sudo nano /etc/influxdb/influxdb.config
+- [http]
+- auth-enabled = true
+- pprof-enabled = true
+- pprof-auth-enabled = true
+- ping-auth-enabled = true
+- Save Changes and restart InfluxDB
+- sudo systemctl restart influxdb
+- Connecting to Influex with account
+- influx -username admin -password adminpass
